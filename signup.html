@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Osama Alswaidi, Naif Alnajar">
+<title>OctoDrives - Sign Up</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">OctoDrives</div>
+    <div class="header-links">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+            <ul>
+                <li><a href="index.html#about">The Project</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#compare">Compare</a></li>
+                <li><a href="index.html#how">How It Works</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="about.html">About Us</a>
+            <ul>
+                <li><a href="about.html#mission">Mission</a></li>
+                <li><a href="about.html#vision">Vision</a></li>
+                <li><a href="about.html#team">Team</a></li>
+                <li><a href="about.html#contact">Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <div class="banner-box">
+        <a href="about.html">
+            <img src="images/signup-banner.jpeg" alt="OctoDrives sign up banner - go to About Us" width="900" height="200" class="banner">
+            <span class="banner-text">Join OctoDrives</span>
+        </a>
+    </div>
+
+    <h2 style="text-align:center;">Create Your Account</h2>
+    <p style="text-align:center;">Join OctoDrives and book your first test drive today.</p>
+
+    <form method="post" action="index.html" autocomplete="on">
+
+        <p>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" class="field" size="25" maxlength="30" placeholder="First Name" autofocus required>
+        </p>
+        <p>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" class="field" size="25" maxlength="30" placeholder="Last Name" required>
+        </p>
+        <p>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="field" placeholder="name@domain.com" required>
+        </p>
+        <p>
+            <label for="phone">Phone Number (10 digits)</label>
+            <input type="tel" id="phone" name="phone" class="field" placeholder="05XXXXXXXX" pattern="[0-9]{10}" required>
+        </p>
+        <p>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd" class="field" required>
+        </p>
+        <p>
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" class="field">
+        </p>
+        <p>
+            <label for="driveMonth">Preferred Test Drive Month</label>
+            <input type="text" id="driveMonth" name="driveMonth" class="field" list="months" placeholder="Month">
+            <datalist id="months">
+                <option value="January"></option>
+                <option value="February"></option>
+                <option value="March"></option>
+                <option value="April"></option>
+                <option value="May"></option>
+                <option value="June"></option>
+                <option value="July"></option>
+                <option value="August"></option>
+                <option value="September"></option>
+                <option value="October"></option>
+                <option value="November"></option>
+                <option value="December"></option>
+            </datalist>
+        </p>
+        <p>
+            <label for="city">City</label>
+            <select id="city" name="city" class="field">
+                <option value="">Select a city</option>
+                <option value="Jeddah">Jeddah</option>
+                <option value="Riyadh">Riyadh</option>
+                <option value="Dammam">Dammam</option>
+                <option value="Makkah">Makkah</option>
+                <option value="Madinah">Madinah</option>
+            </select>
+        </p>
+        <p>
+            <label for="carColor">Preferred Car Color</label>
+            <input type="color" id="carColor" name="carColor" value="#c62828">
+        </p>
+        <p>
+            <label for="duration">Test Drive Duration (1 to 3 hours)</label>
+            <input type="range" id="duration" name="duration" min="1" max="3" value="1">
+        </p>
+        <p>
+            <label for="experience">Years of Driving Experience</label>
+            <input type="number" id="experience" name="experience" class="field" min="0" max="60" step="1" value="0">
+        </p>
+
+        <p>
+            <label>Preferred Contact Method</label>
+            <input type="radio" id="email-r" name="contact" value="email" checked>
+            <label for="email-r" style="display:inline;">Email</label>
+            <input type="radio" id="phone-r" name="contact" value="phone">
+            <label for="phone-r" style="display:inline;">Phone</label>
+        </p>
+
+        <p>
+            <label>Interested In</label>
+            <input type="checkbox" id="sedan" name="sedan" checked>
+            <label for="sedan" style="display:inline;">Sedan</label>
+            <input type="checkbox" id="suv" name="suv">
+            <label for="suv" style="display:inline;">SUV</label>
+            <input type="checkbox" id="electric" name="electric">
+            <label for="electric" style="display:inline;">Electric</label>
+        </p>
+
+        <p>
+            <label for="feedback">Tell us about your driving needs (optional)</label>
+            <textarea id="feedback" name="feedback" class="field" rows="5" cols="40"></textarea>
+        </p>
+
+        <p>
+            <input type="submit" value="Create Account" class="btn">
+            <input type="reset" value="Clear Form" class="btn gray">
+        </p>
+
+        <p style="text-align:center;">
+            Already have an account? <a href="login.html">Login here</a>
+        </p>
+    </form>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 OctoDrives. All Rights Reserved.</p>
+    <p>Contact: <a href="mailto:info@octodrives.com">info@octodrives.com</a></p>
+</footer>
+
+</body>
+</html>

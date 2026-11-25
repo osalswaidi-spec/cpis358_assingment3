@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="author" content="Osama Alswaidi, Naif Alnajar">
+<title>OctoDrives - Login</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">OctoDrives</div>
+    <div class="header-links">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+            <ul>
+                <li><a href="index.html#about">The Project</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#compare">Compare</a></li>
+                <li><a href="index.html#how">How It Works</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="about.html">About Us</a>
+            <ul>
+                <li><a href="about.html#mission">Mission</a></li>
+                <li><a href="about.html#vision">Vision</a></li>
+                <li><a href="about.html#team">Team</a></li>
+                <li><a href="about.html#contact">Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <div class="banner-box">
+        <a href="about.html">
+            <img src="images/login-banner.jpeg" alt="OctoDrives login banner - go to About Us" width="900" height="200" class="banner">
+            <span class="banner-text">Welcome To OctoDrives</span>
+        </a>
+    </div>
+
+    <h2 style="text-align:center;">Welcome Back</h2>
+    <p style="text-align:center;">Log in to manage your test-drive bookings.</p>
+
+    <form method="post" action="index.html">
+        <p>
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" class="field" placeholder="name@domain.com" required>
+        </p>
+        <p>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd" name="pwd" class="field" placeholder="Enter your password" required>
+        </p>
+        <p>
+            <input type="checkbox" id="remember" name="remember" checked>
+            <label for="remember" style="display:inline;">Remember me</label>
+        </p>
+        <p>
+            <input type="submit" value="Login" class="btn">
+            <input type="reset" value="Clear" class="btn gray">
+        </p>
+        <p style="text-align:center;">
+            Don't have an account? <a href="signup.html">Sign Up here</a>
+        </p>
+    </form>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 OctoDrives. All Rights Reserved.</p>
+    <p>Contact: <a href="mailto:info@octodrives.com">info@octodrives.com</a></p>
+</footer>
+
+</body>
+</html>

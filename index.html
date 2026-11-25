@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="OctoDrives - Smart Test Drive Booking">
+<meta name="keywords" content="OctoDrives, Test Drive, Cars, Booking">
+<meta name="author" content="Osama Alswaidi, Naif Alnajjar">
+<title>OctoDrives - Home</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<style>
+    .grad {
+        background-image: linear-gradient(to right, #c62828, #8e0000);
+        color: white;
+        text-align: center;
+        padding: 50px 20px;
+        border-radius: 6px;
+        margin-bottom: 15px;
+    }
+    .grad h1 { color: white; font-size: 34px; text-shadow: 2px 2px 4px black; }
+    .grad p { font-size: 17px; }
+</style>
+
+<script>
+    var seconds = 0;
+
+        function formatHour(h) {
+        if (h > 12) {
+            return (h - 12) + ":00 PM";
+        } else if (h == 12) {
+            return "12:00 PM";
+        } else {
+            return h + ":00 AM";
+        }
+    }
+
+        function startTimer() {
+        window.setInterval("updateTime()", 1000);
+    }
+
+    function updateTime() {
+        ++seconds;
+        document.getElementById("soFar").innerHTML = seconds;
+    }
+
+        function showCar(type) {
+        switch (type) {
+            case "sedan":
+                document.getElementById("carImg").src = "images/sedan.jpg";
+                document.getElementById("carName").innerHTML = "OctoDrives Sedan";
+                document.getElementById("carName").style.color = "#c62828";
+                document.getElementById("carText").innerHTML = "Comfortable and efficient for daily driving.";
+                break;
+            case "suv":
+                document.getElementById("carImg").src = "images/suv.jpg";
+                document.getElementById("carName").innerHTML = "OctoDrives SUV";
+                document.getElementById("carName").style.color = "darkblue";
+                document.getElementById("carText").innerHTML = "Spacious and powerful for family trips.";
+                break;
+            case "electric":
+                document.getElementById("carImg").src = "images/electric.jpg";
+                document.getElementById("carName").innerHTML = "OctoDrives Electric";
+                document.getElementById("carName").style.color = "green";
+                document.getElementById("carText").innerHTML = "Quiet, clean and cheap to run.";
+                break;
+            default:
+                document.getElementById("carName").innerHTML = "Choose a vehicle";
+        }
+    }
+
+    function bigPicture() {
+        document.getElementById("carImg").height = "300";
+        document.getElementById("carImg").width = "600";
+    }
+
+    function normalPicture() {
+        document.getElementById("carImg").height = "200";
+        document.getElementById("carImg").width = "400";
+    }
+
+    function cardOver() {
+        document.getElementById("featured").style.backgroundColor = "#fbe9e7";
+    }
+
+    function cardOut() {
+        document.getElementById("featured").style.backgroundColor = "white";
+    }
+
+    function largerText() {
+        document.getElementById("aboutText").style.fontSize = "22px";
+        document.getElementById("aboutText").style.color = "darkblue";
+    }
+
+    function normalText() {
+        document.getElementById("aboutText").style.fontSize = "16px";
+        document.getElementById("aboutText").style.color = "black";
+    }
+</script>
+</head>
+<body onload="startTimer()">
+
+<header>
+    <div class="logo">OctoDrives</div>
+    <div class="header-links">
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li>
+            <a href="index.html">Home</a>
+            <ul>
+                <li><a href="index.html#about">The Project</a></li>
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#compare">Compare</a></li>
+                <li><a href="index.html#how">How It Works</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="about.html">About Us</a>
+            <ul>
+                <li><a href="about.html#mission">Mission</a></li>
+                <li><a href="about.html#vision">Vision</a></li>
+                <li><a href="about.html#team">Team</a></li>
+                <li><a href="about.html#contact">Contact</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+
+    <section class="grad">
+        <h1>Drive The Difference</h1>
+        <p>Book your next test drive online in just a few clicks</p>
+    </section>
+
+    <div class="page-links">
+        <strong>On this page:</strong>
+        <a href="#about">Project</a>
+        <a href="#features">Features</a>
+        <a href="#compare">Compare</a>
+        <a href="#how">How It Works</a>
+    </div>
+
+    <div class="banner-box">
+        <a href="about.html">
+            <img src="images/banner.jpeg" alt="OctoDrives banner - go to About Us" width="900" height="200" class="banner">
+            <span class="banner-text">Smart Test Drive Booking</span>
+        </a>
+    </div>
+
+    <section class="card" id="featured" onmouseover="cardOver()" onmouseout="cardOut()">
+        <h2>Featured Vehicles</h2>
+        <p>Click a button to see another vehicle. Seconds on this page: <strong id="soFar">0</strong></p>
+        <p>
+            <button type="button" class="btn" onclick="showCar('sedan')">Sedan</button>
+            <button type="button" class="btn" onclick="showCar('suv')">SUV</button>
+            <button type="button" class="btn" onclick="showCar('electric')">Electric</button>
+        </p>
+        <div id="carBox">
+            <img id="carImg" src="images/sedan.jpeg" alt="Featured vehicle" width="400" height="200">
+        </div>
+        <p>
+            <button type="button" class="btn gray" onclick="bigPicture()">Bigger picture</button>
+            <button type="button" class="btn gray" onclick="normalPicture()">Normal size</button>
+        </p>
+        <h3 id="carName" style="color:#c62828;">OctoDrives Sedan</h3>
+        <p id="carText">Comfortable and efficient for daily driving.</p>
+    </section>
+
+    <article class="card" id="about">
+        <h2>About The Project</h2>
+        <p id="aboutText"><strong>OctoDrives</strong> is a smart web platform that turns the traditional
+        car test drive into a fully digital experience. Customers can browse cars,
+        verify their National ID using <mark>OCR</mark>, and book a test drive online.</p>
+        <p>It replaces paper forms, manual ID checks, and phone calls with one fast
+        connected system for customers and dealerships.</p>
+        <p>
+            <button type="button" class="btn" onclick="largerText()">Larger text</button>
+            <button type="button" class="btn gray" onclick="normalText()">Normal text</button>
+        </p>
+    </article>
+
+    <section class="card" id="features">
+        <h2>Key Features</h2>
+        <ul class="feature">
+            <li>Real-time vehicle availability</li>
+            <li>Automated National ID verification</li>
+            <li>Secure Tamm authorization</li>
+            <li>Contactless key pickup using Smart Lockers</li>
+            <li>Bilingual interface (English &amp; Arabic)</li>
+        </ul>
+    </section>
+
+    <section class="card" id="slots">
+        <h2>Available Test-Drive Times</h2>
+        <ul class="feature">
+            <script>
+                for (var h = 9; h <= 17; h = h + 2) {
+                    document.write("<li>" + formatHour(h) + "</li>");
+                }
+            </script>
+        </ul>
+    </section>
+
+    <section class="card" id="compare">
+        <h2>Why OctoDrives?</h2>
+        <table>
+            <caption>Comparison of Test-Drive Methods</caption>
+            <thead>
+                <tr><th>Feature</th><th>Traditional</th><th>OctoDrives</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Booking</td><td>Phone call</td><td>Online in seconds</td></tr>
+                <tr class="alt"><td>ID Verification</td><td>Manual</td><td>Automated OCR</td></tr>
+                <tr><td>Authorization</td><td>Paperwork</td><td>Tamm integration</td></tr>
+                <tr class="alt"><td>Key Pickup</td><td>Reception</td><td>Smart Locker</td></tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="2">Time Saved</td><td>Up to 60 minutes</td></tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section class="card" id="how">
+        <h2>How It Works</h2>
+        <ol>
+            <li>Create an account or log in.</li>
+            <li>Pick a branch and a vehicle.</li>
+            <li>Upload your National ID.</li>
+            <li>Confirm the booking and get a code.</li>
+            <li>Pick the key from the Smart Locker and drive.</li>
+        </ol>
+        <p style="text-align:center;"><a href="signup.html" class="btn">Get Started</a></p>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 OctoDrives. All Rights Reserved.</p>
+    <p>Contact: <a href="mailto:info@octodrives.com">info@octodrives.com</a></p>
+</footer>
+
+</body>
+</html>
