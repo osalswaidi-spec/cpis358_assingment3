@@ -5,38 +5,39 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="author" content="Osama Alswaidi, Naif Alnajar">
+<meta name="author" content="Osama Alswaidi, Naif Alnajjar">
 <title>OctoDrives - Sign Up</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script src="/js/script.js"></script>
 </head>
 <body>
 
 <header>
     <div class="logo">OctoDrives</div>
     <div class="header-links">
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
+        <a href="/Home/Login">Login</a>
+        <a href="/Home/Signup">Sign Up</a>
     </div>
 </header>
 
 <nav>
     <ul>
         <li>
-            <a href="index.html">Home</a>
+            <a href="/Home/Index">Home</a>
             <ul>
-                <li><a href="index.html#about">The Project</a></li>
-                <li><a href="index.html#features">Features</a></li>
-                <li><a href="index.html#compare">Compare</a></li>
-                <li><a href="index.html#how">How It Works</a></li>
+                <li><a href="/Home/Index#about">The Project</a></li>
+                <li><a href="/Home/Index#features">Features</a></li>
+                <li><a href="/Home/Index#compare">Compare</a></li>
+                <li><a href="/Home/Index#how">How It Works</a></li>
             </ul>
         </li>
         <li>
-            <a href="about.html">About Us</a>
+            <a href="/Home/About">About Us</a>
             <ul>
-                <li><a href="about.html#mission">Mission</a></li>
-                <li><a href="about.html#vision">Vision</a></li>
-                <li><a href="about.html#team">Team</a></li>
-                <li><a href="about.html#contact">Contact</a></li>
+                <li><a href="/Home/About#mission">Mission</a></li>
+                <li><a href="/Home/About#vision">Vision</a></li>
+                <li><a href="/Home/About#team">Team</a></li>
+                <li><a href="/Home/About#contact">Contact</a></li>
             </ul>
         </li>
     </ul>
@@ -45,8 +46,8 @@
 <div class="container">
 
     <div class="banner-box">
-        <a href="about.html">
-            <img src="images/signup-banner.jpeg" alt="OctoDrives sign up banner - go to About Us" width="900" height="200" class="banner">
+        <a href="/Home/About">
+            <img src="/images/signup-banner.jpeg" alt="OctoDrives sign up banner - go to About Us" width="900" height="200" class="banner">
             <span class="banner-text">Join OctoDrives</span>
         </a>
     </div>
@@ -54,27 +55,36 @@
     <h2 style="text-align:center;">Create Your Account</h2>
     <p style="text-align:center;">Join OctoDrives and book your first test drive today.</p>
 
-    <form method="post" action="index.html" autocomplete="on">
+    <form name="signupForm" method="post" action="index.html" autocomplete="on" onreset="formCleared()">
 
         <p>
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="fname" class="field" size="25" maxlength="30" placeholder="First Name" autofocus required>
+            <input type="text" id="fname" name="fname" class="field" size="25" maxlength="30" placeholder="First Name" autofocus onblur="checkEmpty('fname', 'fnameMsg')">
+            <span id="fnameMsg" class="error"></span>
         </p>
         <p>
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lname" class="field" size="25" maxlength="30" placeholder="Last Name" required>
+            <input type="text" id="lname" name="lname" class="field" size="25" maxlength="30" placeholder="Last Name" onblur="checkEmpty('lname', 'lnameMsg')">
+            <span id="lnameMsg" class="error"></span>
         </p>
         <p>
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" class="field" placeholder="name@domain.com" required>
+            <input type="email" id="email" name="email" class="field" placeholder="name@domain.com" onblur="checkEmpty('email', 'emailMsg')">
+            <span id="emailMsg" class="error"></span>
         </p>
         <p>
             <label for="phone">Phone Number (10 digits)</label>
-            <input type="tel" id="phone" name="phone" class="field" placeholder="05XXXXXXXX" pattern="[0-9]{10}" required>
+            <input type="tel" id="phone" name="phone" class="field" placeholder="05XXXXXXXX" pattern="[0-9]{10}" onfocus="showPhoneHelp()" onblur="hidePhoneHelp()">
+            <span id="phoneHelp" style="color:#c62828; font-size:13px;"></span>
         </p>
         <p>
             <label for="pwd">Password</label>
-            <input type="password" id="pwd" name="pwd" class="field" required>
+            <input type="password" id="pwd" name="pwd" class="field">
+        </p>
+        <p>
+            <label for="pwd2">Confirm Password</label>
+            <input type="password" id="pwd2" name="pwd2" class="field" onblur="checkPasswords()">
+            <span id="pwd2Msg" class="error"></span>
         </p>
         <p>
             <label for="dob">Date of Birth</label>
@@ -146,12 +156,12 @@
         </p>
 
         <p>
-            <input type="submit" value="Create Account" class="btn">
+            <input type="button" value="Create Account" class="btn" onclick="validateSignup()">
             <input type="reset" value="Clear Form" class="btn gray">
         </p>
 
         <p style="text-align:center;">
-            Already have an account? <a href="login.html">Login here</a>
+            Already have an account? <a href="/Home/Login">Login here</a>
         </p>
     </form>
 

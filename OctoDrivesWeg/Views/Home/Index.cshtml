@@ -9,7 +9,7 @@
 <meta name="keywords" content="OctoDrives, Test Drive, Cars, Booking">
 <meta name="author" content="Osama Alswaidi, Naif Alnajjar">
 <title>OctoDrives - Home</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 <style>
     .grad {
         background-image: linear-gradient(to right, #c62828, #8e0000);
@@ -48,19 +48,19 @@
         function showCar(type) {
         switch (type) {
             case "sedan":
-                document.getElementById("carImg").src = "images/sedan.jpg";
+                document.getElementById("carImg").src = "/images/sedan.jpg";
                 document.getElementById("carName").innerHTML = "OctoDrives Sedan";
                 document.getElementById("carName").style.color = "#c62828";
                 document.getElementById("carText").innerHTML = "Comfortable and efficient for daily driving.";
                 break;
             case "suv":
-                document.getElementById("carImg").src = "images/suv.jpg";
+                document.getElementById("carImg").src = "/images/suv.jpg";
                 document.getElementById("carName").innerHTML = "OctoDrives SUV";
                 document.getElementById("carName").style.color = "darkblue";
                 document.getElementById("carText").innerHTML = "Spacious and powerful for family trips.";
                 break;
             case "electric":
-                document.getElementById("carImg").src = "images/electric.jpg";
+                document.getElementById("carImg").src = "/images/electric.jpg";
                 document.getElementById("carName").innerHTML = "OctoDrives Electric";
                 document.getElementById("carName").style.color = "green";
                 document.getElementById("carText").innerHTML = "Quiet, clean and cheap to run.";
@@ -104,29 +104,29 @@
 <header>
     <div class="logo">OctoDrives</div>
     <div class="header-links">
-        <a href="login.html">Login</a>
-        <a href="signup.html">Sign Up</a>
+        <a href="/Home/Login">Login</a>
+        <a href="/Home/Signup">Sign Up</a>
     </div>
 </header>
 
 <nav>
     <ul>
         <li>
-            <a href="index.html">Home</a>
+            <a href="/Home/Index">Home</a>
             <ul>
-                <li><a href="index.html#about">The Project</a></li>
-                <li><a href="index.html#features">Features</a></li>
-                <li><a href="index.html#compare">Compare</a></li>
-                <li><a href="index.html#how">How It Works</a></li>
+                <li><a href="/Home/Index#about">The Project</a></li>
+                <li><a href="/Home/Index#features">Features</a></li>
+                <li><a href="/Home/Index#compare">Compare</a></li>
+                <li><a href="/Home/Index#how">How It Works</a></li>
             </ul>
         </li>
         <li>
-            <a href="about.html">About Us</a>
+            <a href="/Home/About">About Us</a>
             <ul>
-                <li><a href="about.html#mission">Mission</a></li>
-                <li><a href="about.html#vision">Vision</a></li>
-                <li><a href="about.html#team">Team</a></li>
-                <li><a href="about.html#contact">Contact</a></li>
+                <li><a href="/Home/About#mission">Mission</a></li>
+                <li><a href="/Home/About#vision">Vision</a></li>
+                <li><a href="/Home/About#team">Team</a></li>
+                <li><a href="/Home/About#contact">Contact</a></li>
             </ul>
         </li>
     </ul>
@@ -148,8 +148,8 @@
     </div>
 
     <div class="banner-box">
-        <a href="about.html">
-            <img src="images/banner.jpeg" alt="OctoDrives banner - go to About Us" width="900" height="200" class="banner">
+        <a href="/Home/About">
+            <img src="/images/banner.jpeg" alt="OctoDrives banner - go to About Us" width="900" height="200" class="banner">
             <span class="banner-text">Smart Test Drive Booking</span>
         </a>
     </div>
@@ -163,7 +163,7 @@
             <button type="button" class="btn" onclick="showCar('electric')">Electric</button>
         </p>
         <div id="carBox">
-            <img id="carImg" src="images/sedan.jpeg" alt="Featured vehicle" width="400" height="200">
+            <img id="carImg" src="/images/sedan.jpeg" alt="Featured vehicle" width="400" height="200">
         </div>
         <p>
             <button type="button" class="btn gray" onclick="bigPicture()">Bigger picture</button>
@@ -236,7 +236,7 @@
             <li>Confirm the booking and get a code.</li>
             <li>Pick the key from the Smart Locker and drive.</li>
         </ol>
-        <p style="text-align:center;"><a href="signup.html" class="btn">Get Started</a></p>
+        <p style="text-align:center;"><a href="/Home/Signup" class="btn">Get Started</a></p>
     </section>
 
 </div>
