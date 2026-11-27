@@ -1,0 +1,16 @@
+﻿namespace OctoDrivesWeg.Models
+{
+    public class Booking
+    {
+        public int Id { get; set; }
+        public string CustomerName { get; set; }
+
+        public string Email { get; set; }
+
+        public string City { get; set; }
+
+        public string Vehicle { get; set; }
+
+        public DateTime BookingDate { get; set; }
+    }
+}

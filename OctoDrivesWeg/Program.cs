@@ -1,4 +1,9 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using OctoDrivesWeg.Data;
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<OctoDrivesContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("OctoDrivesContext") ?? throw new InvalidOperationException("Connection string 'OctoDrivesContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
