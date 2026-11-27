@@ -33,6 +33,12 @@ namespace OctoDrivesWeg.Controllers
             return View();
         }
 
+        [HttpPost]
+        public string ProcessSignup(string fname, string lname, string email)
+        {
+            return "The data you submit is First name: " + fname + ", Last name: " + lname + ", Email: " + email;
+        }
+
         public IActionResult Privacy()
         {
             return View();
