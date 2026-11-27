@@ -1,0 +1,233 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+}
+
+h1, h2 { color: #c62828; }
+
+header {
+    background-color: white;
+    padding: 15px;
+    height: 30px;
+    border-bottom: 3px solid #c62828;
+}
+
+.logo {
+    color: #c62828;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline;
+}
+
+.header-links { float: right; }
+
+.header-links a {
+    color: #c62828;
+    text-decoration: none;
+    border: 1px solid #c62828;
+    padding: 5px 12px;
+    margin-left: 4px;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+nav {
+    background-color: #c62828;
+    height: 44px;
+    padding-left: 10%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    float: left;
+    position: relative;
+    width: 10em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav ul li a:hover { background-color: #8e0000; }
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    width: 10em;
+    background-color: white;
+    z-index: 100;
+}
+
+nav ul li:hover ul { display: block; }
+
+nav ul li ul li { border-top: 1px solid #ddd; }
+
+nav ul li ul li a {
+    color: #333;
+    padding: 10px 18px;
+    font-weight: normal;
+    text-align: left;
+}
+
+nav ul li ul li a:hover {
+    background-color: #fbe9e7;
+    color: #c62828;
+}
+
+.container {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 5px #ccc;
+}
+
+.page-links {
+    background-color: #fbe9e7;
+    padding: 10px 15px;
+    border-left: 4px solid #c62828;
+    margin-bottom: 15px;
+}
+
+.page-links a { color: #c62828; margin-right: 12px; }
+
+.banner-box {
+    position: relative;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+img.banner {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 200px;
+    border-radius: 6px;
+    z-index: 1;
+}
+
+.banner-text {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 14px;
+    background-color: rgba(198, 40, 40, 0.85);
+    border-radius: 6px;
+}
+
+table { width: 100%; }
+
+caption {
+    font-weight: bold;
+    color: #c62828;
+    text-align: left;
+    padding-bottom: 5px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th { background-color: #c62828; color: white; }
+
+.alt { background-color: #fafafa; }
+
+tfoot td {
+    background-color: #fbe9e7;
+    font-weight: bold;
+}
+
+ul.feature { list-style: none; padding: 0; }
+
+ul.feature li {
+    background-color: #fafafa;
+    border-left: 4px solid #c62828;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    width: 60%;
+    margin-left: 18%;
+    box-shadow: 0px 2px 5px #ccc;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: #333;
+}
+
+.field {
+    width: 95%;
+    padding: 6px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+}
+
+.field:focus {
+    background-color: #fff8f8;
+    border-color: #c62828;
+}
+
+.btn {
+    background-color: #c62828;
+    color: white;
+    border-style: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-right: 4px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.gray { background-color: #777; }
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+footer a { color: #ef9a9a; text-decoration: none; }
+
+@media print {
+    body { background-color: white; font-family: "Times New Roman", times, serif; }
+    header, nav, footer { display: none; }
+}
