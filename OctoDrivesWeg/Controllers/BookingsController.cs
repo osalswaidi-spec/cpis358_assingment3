@@ -27,6 +27,21 @@ namespace OctoDrivesWeg.Controllers
                           Problem("Entity set 'OctoDrivesContext.Booking'  is null.");
         }
 
+        public IActionResult SearchForm()
+        {
+            return View();
+        }
+
+        // POST: Bookings/ShowSearchFormResult
+        [HttpPost]
+        public async Task<IActionResult> ShowSearchFormResult(string SearchBooking)
+        {
+            return _context.Booking != null ?
+                View("Index", await _context.Booking.Where(j =>
+                j.CustomerName.Contains(SearchBooking)).ToListAsync()) :
+                Problem("Entity set 'OctoDrivesContext.Booking' is null.");
+        }
+
         // GET: Bookings/Details/5
         public async Task<IActionResult> Details(int? id)
         {
